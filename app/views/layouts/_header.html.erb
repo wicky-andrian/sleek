@@ -1,0 +1,25 @@
+<header class="header" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Main navigation">
+  <div class="container">
+    <div class="header__inner">
+      <%= link_to root_url, class: 'header__logo' do %>
+        <div class="header__logo--container">
+          <%= render 'layouts/logo' %>
+        </div>
+      <% end %>
+      <nav class="header__links">
+        <div class="container header__links-wrapper">
+        <%= link_to 'Home', root_url, class: 'header__link' %>
+        <%= link_to 'About', about_url, class: 'header__link' %>
+          <a class="header__link" href="{{ '/contact' | relative_url }}" itemprop="url">
+            <span itemprop="name">Contact</span>
+          </a>
+        </div>
+      </nav>
+      <div class="header__toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</header>
